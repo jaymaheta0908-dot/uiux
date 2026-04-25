@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYJU'S App</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- LOGIN -->
+<div id="login" class="screen active">
+  <h2>BYJU'S</h2>
+  <p>Welcome back 👋</p>
+
+  <input placeholder="Email">
+  <input type="password" placeholder="Password">
+
+  <button onclick="go('onboarding', this)">Login</button>
+</div>
+
+<!-- ONBOARDING -->
+<div id="onboarding" class="screen">
+  <h2>Personalize 🎯</h2>
+
+  <p>Select Class</p>
+  <div class="chips">
+    <span>Class 10</span>
+    <span>Class 11</span>
+  </div>
+
+  <p>Select Subjects</p>
+  <div class="chips">
+    <span>Math</span>
+    <span>Science</span>
+    <span>English</span>
+  </div>
+
+  <button onclick="go('home', this)">Continue</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="screen">
+  <h2>Hi Ananya 👋</h2>
+
+  <button onclick="toggleDark()">🌙 Dark Mode</button>
+
+  <div class="card highlight">
+    <h3>Continue Learning</h3>
+    <p>Math - Chapter 3</p>
+    <button>Resume</button>
+  </div>
+
+  <div class="card">
+    <h3>Subjects</h3>
+    <div class="grid">
+      <div>📐 Math</div>
+      <div>🔬 Science</div>
+      <div>📖 English</div>
+      <div>🌍 History</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEARN -->
+<div id="learn" class="screen">
+  <h2>Learn 📘</h2>
+
+  <div class="card">
+    <p>Math Chapter 1</p>
+    <button>Start</button>
+  </div>
+
+  <div class="card">
+    <p>Science Chapter 2</p>
+    <button>Start</button>
+  </div>
+</div>
+
+<!-- PRACTICE -->
+<div id="practice" class="screen">
+  <h2>Practice 📝</h2>
+
+  <div class="card">
+    <p>Math Test</p>
+    <button>Start</button>
+  </div>
+
+  <div class="card">
+    <p>Science Quiz</p>
+    <button>Start</button>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div id="progress" class="screen">
+  <h2>Progress 📊</h2>
+
+  <div class="card">
+    <p>Math - 65%</p>
+    <p>Science - 80%</p>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="screen">
+  <div class="card highlight" style="text-align:center;">
+    <h3>Ananya</h3>
+    <p>Class 10</p>
+  </div>
+
+  <div class="card">
+    <p>Courses: 8</p>
+    <p>Points: 2450</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<div class="nav">
+  <span onclick="go('home', this)">🏠</span>
+  <span onclick="go('learn', this)">📘</span>
+  <span onclick="go('practice', this)">📝</span>
+  <span onclick="go('progress', this)">📊</span>
+  <span onclick="go('profile', this)">👤</span>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
